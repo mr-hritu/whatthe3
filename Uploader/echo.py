@@ -74,7 +74,9 @@ async def echo(bot, update):
         )
 
     if "\n" in url:
-        url_parts = url.split("\n")
+        url_part = url.split("\n")
+        for i in url_part:
+            url_parts = i.split(':')[1]
         if len(url_parts) == 2:
             url = url_parts[0]
             file_name = url_parts[1]
