@@ -73,8 +73,8 @@ async def echo(bot, update):
             quote=True
         )
 
-    if "|" in url:
-        url_parts = url.split("|")
+    if "\n" in url:
+        url_parts = url.split("\n")
         if len(url_parts) == 2:
             url = url_parts[0]
             file_name = url_parts[1]
